@@ -1,0 +1,31 @@
+<app-header title="Products" subtitle="" button=""> </app-header>
+
+<div class="container">
+    <div class="row">
+       <div class="column">
+            <img style="max-width:100%;" src="assets/{{product.image}}" />
+        </div>
+        <div class="column" style="border:0px solid gray;word-wrap: break-word;max-width:500px; margin-left: 100px;">
+            <h1>{{product.name}}</h1>    
+            <h5> {{product.detail}}
+            </h5> 
+            <h5>Item Code: <a>{{product.code}}</a> </h5>
+            <h5>Availabel units in stock: <a>{{product.instock}}</a> </h5>
+            <h5> Manufactor: <a>{{product.manufactor}}</a></h5>
+            <h5>Category: <a>{{product.category}}</a> </h5>
+            <h3>Price: <a>{{product.price}}</a></h3>
+            <div class="section" style="padding-bottom:20px;">
+                <h6 class="title-attr"><small>Number of items:</small></h6>                    
+                <div>
+                    <div class="btn-minus"><span class="glyphicon glyphicon-minus"></span></div>
+                    <input value="1" />
+                </div>
+            </div>                
+            <div class="section" style="padding-bottom:20px;">
+                <button class="btn btn-success"> Back</button>
+
+                <button class="btn btn-success"> Add to cart</button>
+            </div>                                        
+        </div>                              	
+    </div>
+</div>  

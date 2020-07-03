@@ -1,0 +1,31 @@
+<app-header title="Products" subtitle="All the available products in our store" button=""></app-header>
+
+
+<div class="container">
+    <div class="row">
+        <div *ngFor="let product of products">
+            <div class="col">
+                <div class="card" >
+                    <img class="card-img-top" src="assets{{product.image}}" alt="Card image cap">
+                    <div class="card-body">
+                        <h4 class="card-title"><a href="/product/detail/{{product.id}}" title="View Product">{{product.name}}</a></h4>
+                        <p class="card-text">{{product.des}}</p>
+                        <p class="card-text">{{product.price}}</p>
+                        <p class="card-text">{{product.instock}} units in stock</p>
+
+                        <div class="row">
+                            <div class="col">
+                                <a href="/product/detail/{{product.id}}" class="button-info">More info</a>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="button-order" (click) ="addToCart(product)">Order now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
